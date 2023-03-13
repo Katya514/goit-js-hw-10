@@ -55,12 +55,14 @@ function displayCountryInfo(countryName) {
   const markupInfo = countryName
     .map(({ name, flags, capital, population, languages }) => {
       return `
-      <img src="${flags.svg}" alt="${name.official}" width="25" height= "15"/>
+      <div class="accent_line"> <img src="${flags.svg}" alt="${
+        name.official
+      }" width="50" height= "25"/>
 
-<h1>${name.official}</h1>
-<p>Capital:${capital}</p>
-<p>Population:${population}</p>
-<p>Languages: ${languages.map(language => language.name).join(',')}</p>`;
+<h1>${name.official}</h1> </div>
+<p><b>Capital</b>: ${capital}</p>
+<p><b>Population</b>: ${population}</p>
+<p><b>Languages</b>: ${Object.values(languages).join(', ')}</p>`;
     })
     .join('');
 

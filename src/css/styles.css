@@ -38,3 +38,9 @@ h2 {
   letter-spacing: 1;
   line-height: 1.5;
 }
+
+.accent_line {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
